@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-10-09 08:56:52
- * @LastEditTime: 2020-10-09 08:57:56
- * @LastEditors: your name
+ * @LastEditTime: 2020-10-10 11:47:12
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /writeFunction/index.html
  -->
@@ -13,7 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="/debounce.js"></script>
 <body>
-    
+    <button id="button">点击啊</button>
+    <script>
+        function fn(event){
+            console.log(event,'打印啊 防抖');
+        }
+        button.addEventListener('click',(event)=>{
+            debounce(fn,1000)(event);
+        })
+    </script>
 </body>
 </html>
